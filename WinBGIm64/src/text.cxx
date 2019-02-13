@@ -57,17 +57,17 @@ static int font_family[] =
 };
 static char* font_name[] =
 {
-    "Console",          // DefaultFont
-    "Times New Roman",  // TriplexFont
-    "Small Fonts",      // SmallFont
-    "MS Sans Serif",    // SansSerifFont
-    "Arial",            // GothicFont
-    "Script",           // ScriptFont
-    "Times New Roman",  // SimplexFont
-    "Script",           // TriplexScriptFont
-    "Courier New",      // ComplexFont
-    "Times New Roman",  // EuropeanFont
-    "Courier New Bold", // BoldFont
+    (char *) "Console",          // DefaultFont
+    (char *) "Times New Roman",  // TriplexFont
+    (char *) "Small Fonts",      // SmallFont
+    (char *) "MS Sans Serif",    // SansSerifFont
+    (char *) "Arial",            // GothicFont
+    (char *) "Script",           // ScriptFont
+    (char *) "Times New Roman",  // SimplexFont
+    (char *) "Script",           // TriplexScriptFont
+    (char *) "Courier New",      // ComplexFont
+    (char *) "Times New Roman",  // EuropeanFont
+    (char *) "Courier New Bold", // BoldFont
 };
 
 static struct { int width; int height; } font_metrics[][11] = {
@@ -351,7 +351,7 @@ void outstreamxy(int x, int y, std::ostringstream& out)
 	{
 	    if (line.length( ) > 0)
 	    	outtext((char *) line.c_str( ));
-	    y += textheight("X");
+	    y += textheight((char *) "X");
 	    x = startx;
 	    line.clear( );
 	    moveto(x,y);
