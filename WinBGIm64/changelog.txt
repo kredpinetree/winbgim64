@@ -10,4 +10,8 @@ winbgim.cxx 464: "EGAVGA"->(char *) "EGAVGA" (deprecated in later versions of C+
 
 winbgim.cxx 570: cast all string constants to (char *) (deprecated in later versions of C++)
 
+text.cxx 71: cast all string constants to (char *) (deprecated in later versions of C++)
+
+text.cxx 354: "X"->(char *) "X" (deprecated in later versions of C++)
+
 *The makefile can only be run on Unix systems, but it is possible to build the library from scratch on Windows systems using 64-bit minGW!
