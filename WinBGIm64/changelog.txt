@@ -1,0 +1,13 @@
+Changelog:
+
+winbgim.cxx 302: change duplicate int right to int top (2nd arg)
+
+winthread.cxx 103: SetWindowLong->SetWindowLongPtr (deprecated in Win64), GWL_USERDATA->GWLP_USERDATA (deprecated in Win64), (LONG)pWndData->(LONG_PTR)pWndData (deprecated in Win64)
+
+drawing.cxx 66: GetWindowLong->GetWindowLongPtr (deprecated in Win64), GWL_USERDATA->GWLP_USERDATA (deprecated in Win64)
+
+winbgim.cxx 464: "EGAVGA"->(char *) "EGAVGA" (deprecated in later versions of C++)
+
+winbgim.cxx 570: cast all string constants to (char *) (deprecated in later versions of C++)
+
+*The makefile can only be run on Unix systems, but it is possible to build the library from scratch on Windows systems using 64-bit minGW!
